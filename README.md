@@ -11,22 +11,21 @@
 
 ## Abstract
 
-This DEP describes several enhancements which could be made to the default Django Project created when the `startproject` command is run. The goal is to maintain the simplicity of the initial project, while removing pain points for newcomers and taking advantage of several opportunities to give direction for learning.
+This DEP describes enhancements which could be made to the default Django Project created when the `startproject` command is run. The goal is to maintain the simplicity of the initial project, while removing pain points for newcomers and taking advantage of several opportunities to give direction for learning.
 
-We would plan for this to become to become the default project created with the `startproject` command.
+This new defined structure would become the default project created with the `startproject` command.
 
 ## Background and Motivation
 
-Over the past few years, I have had the opportunity to introduce Django to over a hundred people. Some of these people have been experienced developers, some have been brand new to coding, with the full spectrum of experience levels in between. This has shown patterns and pain points that the default Django Project could be modified to remove, making Django more accessible to the newcomer.
+Over the past few years, I have had the opportunity to introduce Django to over a hundred people. Some of these people have been experienced developers, some have been brand new to coding, with the full spectrum of experience levels in between. Patterns have emerged from this experience, exposing several pain points that the default Django Project could be modified to remove. The end goal would be making Django more accessible to the newcomer.
 
 There are three main pain points which have been revealed:
 
-* Confusion over project settings versus Django apps
-* Opportunities for providing learning through introspection
+* Confusion on location of project settings, and how they differ from Django apps
 * Confusion created by providing a project that lacks many conventions used in a production project
 * Answering the question after "It Worked!": "What's Next?"
 
-This project would include rewriting the documenation where necessary, and notifying (and working with) maintainers of third-party tutorials. It would not include [a rewrite of the URLs syntax](https://gist.github.com/tomchristie/cb388f0f6a0dec931c611775f32c5f98), a pain point for beginners, which is already being addressed.
+This proposal also seeks to leverage opportunities for providing useful feedback to the learning process. The feature would also include rewriting the documenation where necessary, and notifying (and working with) maintainers of third-party tutorials. It would not include [a rewrite of the URLs syntax](https://gist.github.com/tomchristie/cb388f0f6a0dec931c611775f32c5f98), another pain point for beginners, which is already being addressed.
 
 ## Specification
 
@@ -34,13 +33,14 @@ Here are functional specifications for what we would recommend changing.
 
 ### Feedback From the 'startproject' Command
 
-The `django-admin startproject` command currently only gives console feedback if there is an error. This is an opportunity to provide some friendly text for new Djangonauts, which can easily be ignored by those with  more experience:
+The `django-admin startproject` command currently only gives console feedback if there is an error. This is an opportunity to provide some friendly text for new Djangonauts, which can easily be ignored by those with more experience:
 
     $ django-admin startproject myproject
     Your project 'myproject' has been created successfully! You can try to run your site with these commands:
         $ cd myproject
         $ python manage.py runserver
-    Then, visit http://localhost:8000/ in your browser.
+    Then, visit http://localhost:8000/ in your browser. If you are having issues (or are using Vagrant), you may want to try:
+        $ python manage.py runserver 0:8000
 
 This extra piece of handholding can be especially helpful to newcomers just starting to get comfortable with the command line.
 
