@@ -77,11 +77,14 @@ While it gives a nice instruction on starting a Django app, this seems like a hu
 
 ![Proposal 'Congratulations!' Page](img/congrats.jpg "Proposal 'Congratulations!' Page")
 
+This would allow us to feature several styles of next steps, for different kinds of newcomers. An idea for the Google search link would be [https://www.google.com/search?q=django+tutorials&tbs=qdr:y](django tutorials modified within the past year).
+
 ## Documentation
 
 The documentation will have to be updated to refelect these changes, most heavily in the tutorial.
 
 * The [https://docs.djangoproject.com/en/1.11/intro/](Django Tutorial) contains many references to `settings.py`.
+* Finding other locations that specifically reference a `settings.py` file: https://docs.djangoproject.com/en/1.10/search/?q=settings.py
 
 ## Implementation tasks
 
