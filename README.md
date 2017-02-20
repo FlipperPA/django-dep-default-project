@@ -93,4 +93,4 @@ The following independant tasks can be identified:
 * Convert the project created with the `djangoadmin startproject` command to reflect the new default project structure.
 * Update the Django documentation.
 * Identify affected third party tutorials and notify their maintainers.
-* Choose sites to highlight in "What's Next" section of the "It Worked!" page.
+* Choose sites to highlight in "What's Next" section of the "Congratulations!" page (formerly titled, "It Worked!").
