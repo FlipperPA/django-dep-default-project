@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8000/ -->
+<html lang="en"><script data-x-lastpass="">(function(){var c=0;if("undefined"!==typeof CustomEvent&&"function"===typeof window.dispatchEvent){var a=function(a){try{if("object"===typeof a&&(a=JSON.stringify(a)),"string"===typeof a)return window.dispatchEvent(new CustomEvent("lprequeststart",{detail:{data:a,requestID:++c}})),c}catch(f){}},b=function(a){try{window.dispatchEvent(new CustomEvent("lprequestend",{detail:a}))}catch(f){}};"undefined"!==typeof XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.send&&(XMLHttpRequest.prototype.send=
+function(c){return function(f){var d=this,e=a(f);e&&d.addEventListener("loadend",function(){b({requestID:e,statusCode:d.status})});return c.apply(d,arguments)}}(XMLHttpRequest.prototype.send));"function"===typeof fetch&&(fetch=function(c){return function(f,d){var e=a(d),g=c.apply(this,arguments);if(e){var h=function(a){b({requestID:e,statusCode:a&&a.status})};g.then(h)["catch"](h)}return g}}(fetch))}})();
+(function(){if("undefined"!==typeof CustomEvent){var c=function(a){if(a.lpsubmit)return a;var b=function(){try{this.dispatchEvent(new CustomEvent("lpsubmit"))}catch(k){}return a.apply(this,arguments)};b.lpsubmit=!0;return b};window.addEventListener("DOMContentLoaded",function(){if(document&&document.forms&&0<document.forms.length)for(var a=0;a<document.forms.length;++a)document.forms[a].submit=c(document.forms[a].submit)},!0);document.createElement=function(a){return function(){var b=a.apply(this,
+arguments);b&&"FORM"===b.nodeName&&b.submit&&(b.submit=c(b.submit));return b}}(document.createElement)}})();
+</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="robots" content="NONE,NOARCHIVE"><title>Welcome to Django</title>
+  <style type="text/css">
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font:small sans-serif; }
+    body>div { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; }
+    h2 { margin-bottom:.8em; }
+    h2 span { font-size:80%; color:#666; font-weight:normal; }
+    h3 { margin:1em 0 .5em 0; }
+    h4 { margin:0 0 .5em 0; font-weight: normal; }
+    table { border:1px solid #ccc; border-collapse: collapse; width:100%; background:white; }
+    tbody td, tbody th { vertical-align:top; padding:2px 3px; }
+    thead th {
+      padding:1px 6px 1px 3px; background:#fefefe; text-align:left;
+      font-weight:normal; font-size:11px; border:1px solid #ddd;
+    }
+    tbody th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    #summary { background: #e0ebff; }
+    #summary h2 { font-weight: normal; color: #666; }
+    #explanation { background:#eee; }
+    #instructions { background:#f6f6f6; }
+    #summary table { border:none; background:transparent; }
+    .container {
+        display: flex;
+    }
+
+    .column {
+        flex: 1;
+        
+        background: #f2f2f2;
+        border: 1px solid #e6e6e6;
+        box-sizing: border-box;
+        padding: 40px;
+        margin: 10px;
+    }
+    .btn {
+      background: #3498db;
+      font-family: Arial;
+      color: #ffffff;
+      font-size: 20px;
+      padding: 10px 20px 10px 20px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #3cb0fd;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body data-feedly-mini="yes">
+<div id="summary">
+  <h1>Congratulations!</h1>
+  <h2>You have created your first Django-powered page.</h2>
+</div>
+
+
+<div id="introduction">
+  <h2>What's Next?</h2>
+  <p>
+  There are many resources for learning more about Django. Here are a few to get your started, but <a href="https://www.google.com/#q=django+getting+started&tbs=qdr:y">Google is also your friend!</a>
+  </p>
+</div>
+<div class="container">
+  <div class="column column-one">
+    <h2>Poll Application Tutorial</h2>
+    <p>
+      In the official Django tutorial, you will learn the basics about Django by building an application to 
+      create polls and allow users to take them.
+      This tutorial picks up right where you are: with Django installed and ready to go.
+      <br><br>
+      You will learn the basics of the Django framework project structure, defining models, writing views, and 
+      creating templates.
+      <br><br>
+      The project you create in this tutorial will consist of two parts:
+      <br><br>
+      <ul>
+        <li>A public site that lets people view polls and vote in them.</li>
+        <li>An admin site that lets you add, change, and delete polls.</li>
+      </ul>
+      <br><br>
+      <a class="btn" href="https://docs.djangoproject.com/en/1.10/intro/tutorial01/">Polling App Tutorial</a>
+      <br>
+    </p>
+  </div>
+  <div class="column column-two">
+    <h2>Django Girls Tutorial</h2>
+    <p>
+      In this tutorial, we will take you on a journey under the hood of web technologies, 
+      offering you a glimpse of all the bits and pieces that need to come together to 
+      make the web work as we know it.
+      <br><br>
+      As with all unknown things, this is going to be an adventure - but no worries, since 
+      you already worked up the courage to be here, you'll be just fine!
+      <br><br>
+      Once you've finished the tutorial, you will have a simple, working web application: 
+      your own blog. We will show you how to put it online, so others will see your work!
+      <br><br><br>
+      <a class="btn" href="https://tutorial.djangogirls.org/en/">Django Girls Tutorial</a>
+      <br>
+    </p>
+  </div>
+  <div class="column column-three">
+    <h2>Official Documentation</h2>
+    <p>
+      Django's documentation has often been mentioned as one of its best features. It is organized
+      into four basic areas:
+      <br><br>
+      <ul>
+        <li><a class="reference internal" href="intro/"><span class="doc">Tutorials</span></a> take you by the hand through a series of
+steps to create a Web application. Start here if you&#8217;re new to Django or Web
+application development. Also look at the &#8220;<a class="reference internal" href="#index-first-steps"><span class="std std-ref">First steps</span></a>&#8221; below.</li>
+        <li><a class="reference internal" href="topics/"><span class="doc">Topic guides</span></a> discuss key topics and concepts at a
+        fairly high level and provide useful background information and explanation.</li>
+        <li><a class="reference internal" href="ref/"><span class="doc">Reference guides</span></a> contain technical reference for APIs and
+        other aspects of Django&#8217;s machinery. They describe how it works and how to
+        use it but assume that you have a basic understanding of key concepts.</li>
+        <li><a class="reference internal" href="howto/"><span class="doc">How-to guides</span></a> are recipes. They guide you through the
+        steps involved in addressing key problems and use-cases. They are more
+        advanced than tutorials and assume some knowledge of how Django works.</li>
+      </ul>
+      <br><br>
+      <a class="btn" href="https://docs.djangoproject.com/en/">Documentation</a>
+      <br>
+    </p>
+  </div>
+</div>
+
+<div id="explanation">
+  <p>
+    You're seeing this message because you have <code>DEBUG = True</code> in your Django settings file and you haven't configured any URLs. Your URLs can be configured in <code>config/urls.py</code> and your settings are located in <code>config/settings/base.py</code>.
+  </p>
+</div>
+
+<div id="feedly-mini" title="feedly Mini tookit"></div></body></html>
