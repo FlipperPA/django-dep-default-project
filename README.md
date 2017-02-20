@@ -11,7 +11,7 @@
 
 ## Abstract
 
-This DEP describes several enhancements which could be made to the default Django Project created when the `startproject` command is run. The goal is to maintain the simplicity of the initial project, while removing several pain points for newcomers and taking advantage of several opportunities to give direction for learning.
+This DEP describes several enhancements which could be made to the default Django Project created when the `startproject` command is run. The goal is to maintain the simplicity of the initial project, while removing pain points for newcomers and taking advantage of several opportunities to give direction for learning.
 
 We would plan for this to become to become the default project created with the `startproject` command.
 
@@ -32,11 +32,21 @@ This project would include rewriting the documenation where necessary, and notif
 
 Here are functional specifications for what we would recommend changing.
 
+### Feedback From the 'startproject' Command
+
+The `django-admin startproject` command currently only gives console feedback if there is an error. This is an opportunity to provide some friendly text for new Djangonauts, which can easily be ignored by those with  more experience:
+
+    $ django-admin startproject myproject
+    Your project 'myproject' has been created successfully! You can try to run your site with these commands:
+        $ cd myproject
+        $ python manage.py runserver
+    Then, visit http://localhost:8000/ in your browser.
+
+This extra piece of handholding can be especially helpful to newcomers just starting to get comfortable with the command line.
+
 ### Configuration Directory Convention
 
-Currently, Django creates a configuration sub-directory with the same name given to the project. For example, this command will create the following directory structure for configuration files:
-
-    django-admin startproject myproject
+Currently, Django creates a configuration sub-directory with the same name given to the project. For example:
 
 ```
 myproject/
@@ -91,6 +101,10 @@ The documentation will have to be updated to refelect these changes, most heavil
 The following independant tasks can be identified:
 
 * Convert the project created with the `djangoadmin startproject` command to reflect the new default project structure.
+    * Add `requirements` directory and `base.txt` with current Django version.
+    * Create a `config` directory instead of a nested directory with the project name..
+    * Create a `settings` directory with a `base.py` file (replacing `settings.py`)
+    * Modify the "It Worked!" browser confirmation page.
 * Update the Django documentation.
 * Identify affected third party tutorials and notify their maintainers.
 * Choose sites to highlight in "What's Next" section of the "Congratulations!" page (formerly titled, "It Worked!").
