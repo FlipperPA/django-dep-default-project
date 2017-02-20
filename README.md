@@ -1,4 +1,4 @@
-# DEP XXX: Django default Project Enhancements
+# DEP XXX: Django Default Project Enhancements
 
 * DEP: XXX
 * Author: Timothy Allen
