@@ -32,7 +32,7 @@ This project would include rewriting the documenation where necessary, and notif
 
 Here are functional specifications for what we would recommend changing.
 
-### Consistent Configuration Directory
+### Configuration Directory Convention
 
 Currently, Django creates a configuration sub-directory with the same name given to the project. For example, this command will create the following directory structure for configuration files:
 
@@ -69,10 +69,7 @@ This has several advantages. First, configuration files will always be in a `con
 
 The following independant tasks can be identified:
 
-* Convert the project created Implement the `convertors` argument. This adds the low-level API support for type coercion. Ensure that lookups perform type coercion, and correspondingly, that calls to `reverse` work correctly with typed arguments.
-* Add support for the new style `path` function, with an underlying implementation based on the regex urls.
-* Add `path_regex`, with `from django.conf.urls import url` becoming a shim for it.
-* Add support for registering custom convertors, as defined in the Django settings.
-* Document the new style URL configuration.
-* Update existing URL cases in the documentation throughout.
-* Update the tests throughout, updating to the new style wherever possible.
+* Convert the project created with the `djangoadmin startproject` command to reflect the new default project structure.
+* Update the Django documentation.
+* Identify affected third party tutorials and notify their maintainers.
+* Choose sites to highlight in "What's Next" section of the "It Worked!" page.
