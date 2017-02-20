@@ -39,28 +39,28 @@ Currently, Django creates a configuration sub-directory with the same name given
     django-admin startproject myproject
 
 ```
-+ myproject/
-+ myproject/manage.py
-+--- myproject/
-+--- myproject/settings.py
-+--- app1/
-+--- app2/
+myproject/
+    manage.py
+    myproject/
+        settings.py
+    app1/
+    app2/
 ```
 
 This is a source of confusion for the majority of new Djangonauts. Let's pick a convention and stick with it, a `config` directory:
 
 ```
-+ myproject/
-+ myproject/manage.py
-+--- config/
-+--- config/urls.py
-+--- config/wsgi.py
-+--- config/settings/
-+--- config/settings/base.py
-+--- requirements/
-+--- requirements/base.txt
-+--- app1/
-+--- app2/
+myproject/
+    manage.py
+    config/
+        urls.py
+        wsgi.py
+        settings/
+            base.py
+    requirements/
+        base.txt
+    app1/
+    app2/
 ```
 
 This has several advantages. First, configuration files will always be in a `config` subdirectory, with a settings subdirectory underneath it. Explaining to newcomers that the `config.urls` is the root of your URLs has made a lot more sense to newcomers since I have started using this project layout.
@@ -78,6 +78,10 @@ While it gives a nice instruction on starting a Django app, this seems like a hu
 ![Proposal 'Congratulations!' Page](img/congrats.jpg "Proposal 'Congratulations!' Page")
 
 ## Documentation
+
+The documentation will have to be updated to refelect these changes, most heavily in the tutorial.
+
+* The [https://docs.djangoproject.com/en/1.11/intro/](Django Tutorial) contains many references to `settings.py`.
 
 ## Implementation tasks
 
