@@ -26,7 +26,7 @@ There are three main pain points which have been revealed:
 * Confusion created by providing a project that lacks many conventions used in a production project
 * Answering the question after "It Worked!": "What's Next?"
 
-This project would include rewriting the documenation where necessary, and notifying (and working with) maintainers of third-party tutorials.
+This project would include rewriting the documenation where necessary, and notifying (and working with) maintainers of third-party tutorials. It would not include [https://gist.github.com/tomchristie/cb388f0f6a0dec931c611775f32c5f98](a rewrite of the URLs syntax), a pain point for beginners, which is already being addressed.
 
 ## Specification
 
