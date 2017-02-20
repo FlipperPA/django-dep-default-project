@@ -26,7 +26,7 @@ There are three main pain points which have been revealed:
 * Confusion created by providing a project that lacks many conventions used in a production project
 * Answering the question after "It Worked!": "What's Next?"
 
-This project would include rewriting the documenation where necessary, and notifying (and working with) maintainers of third-party tutorials. It would not include [https://gist.github.com/tomchristie/cb388f0f6a0dec931c611775f32c5f98](a rewrite of the URLs syntax), a pain point for beginners, which is already being addressed.
+This project would include rewriting the documenation where necessary, and notifying (and working with) maintainers of third-party tutorials. It would not include [a rewrite of the URLs syntax](https://gist.github.com/tomchristie/cb388f0f6a0dec931c611775f32c5f98), a pain point for beginners, which is already being addressed.
 
 ## Specification
 
@@ -77,13 +77,13 @@ While it gives a nice instruction on starting a Django app, this seems like a hu
 
 ![Proposal 'Congratulations!' Page](img/congrats.jpg "Proposal 'Congratulations!' Page")
 
-This would allow us to feature several styles of next steps, for different kinds of newcomers. An idea for the Google search link would be [https://www.google.com/search?q=django+tutorials&tbs=qdr:y](django tutorials modified within the past year).
+This would allow us to feature several styles of next steps, for different kinds of newcomers. An idea for the Google search link would be [django tutorials modified within the past year](https://www.google.com/search?q=django+tutorials&tbs=qdr:y).
 
 ## Documentation
 
 The documentation will have to be updated to refelect these changes, most heavily in the tutorial.
 
-* The [https://docs.djangoproject.com/en/1.11/intro/](Django Tutorial) contains many references to `settings.py`.
+* The [Django Tutorial](https://docs.djangoproject.com/en/1.11/intro/) contains many references to `settings.py`.
 * Finding other locations that specifically reference a `settings.py` file: https://docs.djangoproject.com/en/1.10/search/?q=settings.py
 
 ## Implementation tasks
