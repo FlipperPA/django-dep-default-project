@@ -69,6 +69,10 @@ After successfully starting a Django project and bringing it up in the browser, 
 
 ![Django's 'It Worked!' Page](img/itworked.jpg "Django's 'It Worked!' Page")
 
+While it gives a nice instruction on starting a Django app, this seems like a huge missed opportunity to point a new Djangonaut towards one of the many vibrant Django tutorials available. Image if we provided the newcomer with something like this instead:
+
+![Proposal 'Congratulations!' Page](img/congrats.jpg "Proposal 'Congratulations!' Page")
+
 ## Documentation
 
 ## Implementation tasks
