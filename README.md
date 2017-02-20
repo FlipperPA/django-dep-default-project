@@ -61,7 +61,7 @@ This is a source of confusion for the majority of new Djangonauts. Let's pick a 
 +--- app2/
 ```
 
-This has several advantages. First, configuration files will always be in a `config` subdirectory, with a settings subdirectory underneath it. Explaining to newcomers that the `config.urls` is the root of your URLs has made a lot more sense to newcomers since I have started using this project layout. While requirements files aren't necessarily part of a first time experience, it gives an opportunity for learning by introspection as well.
+This has several advantages. First, configuration files will always be in a `config` subdirectory, with a settings subdirectory underneath it. Explaining to newcomers that the `config.urls` is the root of your URLs has made a lot more sense to newcomers since I have started using this project layout. While requirements files aren't necessarily part of a first time experience, it gives an opportunity for learning by introspection as well. Let's create a `requirements/base.txt` file with a single line, `Django==X.Y.Z`.
 
 ### Valuable Real Estate: The "It Worked!" page
 
