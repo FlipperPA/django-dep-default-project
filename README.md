@@ -63,6 +63,12 @@ This is a source of confusion for the majority of new Djangonauts. Let's pick a 
 
 This has several advantages. First, configuration files will always be in a `config` subdirectory, with a settings subdirectory underneath it. Explaining to newcomers that the `config.urls` is the root of your URLs has made a lot more sense to newcomers since I have started using this project layout. While requirements files aren't necessarily part of a first time experience, it gives an opportunity for learning by introspection as well.
 
+### Valuable Real Estate: The "It Worked!" page
+
+After successfully starting a Django project and bringing it up in the browser, the new Django user is greeted with this page:
+
+![Django's 'It Worked!' Page](img/itworked.jpg "Django's 'It Worked!' Page")
+
 ## Documentation
 
 ## Implementation tasks
