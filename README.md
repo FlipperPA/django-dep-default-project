@@ -42,7 +42,7 @@ The `django-admin startproject` command currently only gives console feedback if
     Then, visit http://localhost:8000/ in your browser. If you are having issues (or are using Vagrant), you may want to try:
         $ python manage.py runserver 0:8000
 
-This extra piece of handholding can be especially helpful to newcomers just starting to get comfortable with the command line.
+This extra piece of handholding can be especially helpful to newcomers just starting to get comfortable with the command line. The 'startproject' command should be geared towards the newcomer in particular, since experienced Djangonauts can use some sort of starting template system for their preferred project layout (copy & paste, the '--template' argument, or Cookie Cutter, for example).
 
 ### Configuration Directory Convention
 
@@ -53,6 +53,8 @@ myproject/
     manage.py
     myproject/
         settings.py
+        urls.py
+        wsgi.py
     app1/
     app2/
 ```
@@ -62,20 +64,18 @@ This is a source of confusion for the majority of new Djangonauts. Let's pick a 
 ```
 myproject/
     manage.py
+    requirements.txt
     config/
+        settings.py
         urls.py
         wsgi.py
-        settings/
-            base.py
-    requirements/
-        base.txt
     app1/
     app2/
 ```
 
-This has several advantages. First, configuration files will always be in a `config` subdirectory, with a settings subdirectory underneath it. Explaining to newcomers that the `config.urls` is the root of your URLs has made a lot more sense to newcomers since I have started using this project layout.
+This has several advantages. First, configuration files will always be in a `config` subdirectory. Explaining to newcomers that the `config.urls` is the root of your URLs has made a lot more sense to newcomers since I have started using this project layout.
 
-While requirements files aren't necessarily part of a first time experience, it gives an opportunity for learning by introspection as well. Let's create a `requirements/base.txt` file with a single line, `Django==X.Y.Z`.
+While a requirements file isn't necessarily part of a first time experience, it gives an opportunity for learning by introspection as well. Let's create a `requirements.txt` file with a single line, `Django==X.Y.Z`, so when a newcomer sees references to a requirements file, there is something to find.
 
 ### Valuable Real Estate: The "It Worked!" page
 
@@ -101,10 +101,9 @@ The documentation will have to be updated to refelect these changes, most heavil
 The following independant tasks can be identified:
 
 * Convert the project created with the `djangoadmin startproject` command to reflect the new default project structure.
-    * Add `requirements` directory and `base.txt` with current Django version.
-    * Create a `config` directory instead of a nested directory with the project name..
-    * Create a `settings` directory with a `base.py` file (replacing `settings.py`)
+    * Create a `config` directory instead of a nested directory with the project name.
     * Modify the "It Worked!" browser confirmation page.
+    * Add a `requirements.txt` file with current Django version.
 * Update the Django documentation.
 * Identify affected third party tutorials and notify their maintainers.
 * Choose sites to highlight in "What's Next" section of the "Congratulations!" page (formerly titled, "It Worked!").
