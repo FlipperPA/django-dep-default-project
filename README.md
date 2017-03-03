@@ -77,6 +77,8 @@ This has several advantages. First, configuration files will always be in a `con
 
 While a requirements file isn't necessarily part of a first time experience, it gives an opportunity for learning by introspection as well. Let's create a `requirements.txt` file with a single line, `Django==X.Y.Z`, so when a newcomer sees references to a requirements file, there is something to find.
 
+This is also being used as a convention on current tutorials: https://medium.com/@djstein/modern-django-part-0-introduction-and-initial-setup-657df48f08f8#f99f
+
 ### Valuable Real Estate: The "It Worked!" page
 
 After successfully starting a Django project and bringing it up in the browser, the new Django user is greeted with this page:
